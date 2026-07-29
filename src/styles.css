@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+
+    --bg:#100C08;
+
+    --surface:rgba(16,12,8,.92);
+
+    --text:#D4D4D4;
+
+    --heading:#FFFFFF;
+
+    --primary:#3B82F6;
+
+    --primary-hover:#2563EB;
+
+    --border:rgba(255,255,255,.08);
+
+    --transition:.35s ease;
+
+    --shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
