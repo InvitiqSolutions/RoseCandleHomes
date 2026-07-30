@@ -4,8 +4,13 @@
 
 </section>
 
+
 <!-- About -->
  <section class="about-section">
+
+    <div class="section-divider">
+        <span>◆</span>
+    </div>
 
     <div class="container">
 
@@ -73,8 +78,10 @@
 
 </section>
 
+<div class="section-divider">
+    <span>◆</span>
+</div>
 <section class="projects-section">
-
     <div class="container">
 
         <div class="section-header">
@@ -279,6 +286,9 @@
 
 </section>
 
+<div class="section-divider">
+    <span>◆</span>
+</div>
 <!-- Why Choose Us -->
  <section class="why-section">
 
@@ -307,43 +317,19 @@
 
                 <div class="stats-grid">
 
-                    <div class="stat-card">
+                    <div class="stat-card" *ngFor="let stat of statistics">
 
-                        <h3>15+</h3>
+                        <h3>
+                            {{ stat.value }}
+                        </h3>
 
-                        <h5>Years Experience</h5>
+                        <h5>
+                            {{ stat.title }}
+                        </h5>
 
-                        <p>Delivering quality construction since day one.</p>
-
-                    </div>
-
-                    <div class="stat-card">
-
-                        <h3>250+</h3>
-
-                        <h5>Projects</h5>
-
-                        <p>Luxury villas, apartments and commercial spaces.</p>
-
-                    </div>
-
-                    <div class="stat-card">
-
-                        <h3>50+</h3>
-
-                        <h5>Experts</h5>
-
-                        <p>Experienced architects and engineers.</p>
-
-                    </div>
-
-                    <div class="stat-card">
-
-                        <h3>100%</h3>
-
-                        <h5>Quality</h5>
-
-                        <p>Committed to delivering excellence.</p>
+                        <p>
+                            {{ stat.description }}
+                        </p>
 
                     </div>
 
@@ -369,8 +355,10 @@
 
 </section>
 
+<div class="section-divider">
+    <span>◆</span>
+</div>
 <!-- Testimonials -->
- 
  <section class="testimonial-section">
 
     <div class="container">
@@ -466,6 +454,9 @@
 
 </section>
 
+<div class="section-divider">
+    <span>◆</span>
+</div>
 <!-- Call To Action -->
  <section class="cta-section">
 

@@ -10,6 +10,29 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   constructor() {}
 
+  statistics = [
+  {
+    value: '15+',
+    title: 'Years Experience',
+    description: 'Delivering quality construction with excellence.'
+  },
+  {
+    value: '250+',
+    title: 'Projects Completed',
+    description: 'Successfully completed residential and commercial projects.'
+  },
+  {
+    value: '50+',
+    title: 'Expert Professionals',
+    description: 'Skilled engineers, architects and designers.'
+  },
+  {
+    value: '98%',
+    title: 'Client Satisfaction',
+    description: 'Built on trust, transparency and lasting relationships.'
+  }
+];
+
 testimonials = [
   {
     name: 'Rahul Sharma',

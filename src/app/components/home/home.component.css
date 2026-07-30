@@ -45,11 +45,30 @@
 
 }
 
+/*==============================*/
+
+@media(max-width:991px){
+
+    .hero-section{
+        
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-section{
+        height:100vh;
+        width:100%;
+    }
+
+}
+
 .about-section{
 
     background:#100C08;
 
-    padding:120px 0;
+    padding:80px 0;
 
 }
 
@@ -422,7 +441,7 @@
         position:static;
         width:92%;
 
-        margin-top:-35px;
+        margin-top:20px;
 
         padding:22px;
 
@@ -442,7 +461,7 @@ PROJECTS
 
 .projects-section{
 
-    padding:120px 0;
+    padding:80px 0;
 
     background:#100C08;
 
@@ -736,7 +755,7 @@ WHY CHOOSE US
 
 .why-section{
 
-    padding:120px 0;
+    padding:80px 0;
 
     background:#100C08;
 
@@ -947,7 +966,7 @@ TESTIMONIAL SECTION
 
 .testimonial-section{
 
-    padding:120px 0;
+    padding:80px 0;
 
     background:#100C08;
 
@@ -1487,7 +1506,7 @@ CALL TO ACTION
 
     .cta-section{
 
-        padding:120px 0;
+        padding:80px 0;
 
     }
 
@@ -1535,5 +1554,63 @@ CALL TO ACTION
         max-width:300px;
 
     }
+
+}
+
+.section-divider {
+
+    position: relative;
+
+    width: 60%;
+
+    margin: 0 auto;
+
+    height: 0;
+
+    z-index: 5;
+
+}
+
+.section-divider::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 1px;
+
+    background: rgba(255,255,255,0.08);
+
+}
+
+.section-divider span {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #100C08;   /* Page background */
+
+    color: #3B82F6;
+
+    font-size: 14px;
+
+    border: 1px solid rgba(59,130,246,.25);
 
 }
