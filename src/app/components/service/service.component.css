@@ -1,0 +1,974 @@
+/*=========================================
+SERVICE HERO
+=========================================*/
+
+.services-hero{
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    background: url('/images/service-hero.jpg') center center/cover no-repeat;
+
+    overflow: hidden;
+
+}
+
+.hero-overlay{
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(16,12,8,.80),
+        rgba(16,12,8,.85)
+    );
+
+}
+
+.hero-content{
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+
+}
+
+.hero-content h1{
+
+    color: #fff;
+
+    font-size: 60px;
+
+    line-height: 1.2;
+
+    margin: 20px 0;
+
+    font-weight: 700;
+
+}
+
+.hero-content h1::after{
+
+    content:"";
+
+    display:block; 
+
+    width:90px;
+
+    height:4px;
+
+    background:#3B82F6;
+
+    margin-top:25px;
+
+    border-radius:20px;
+
+}
+
+.hero-content p{
+
+    color: #D4D4D4;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+.hero-btn{
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 35px;
+
+    border-radius: 50px;
+
+    background: #3B82F6;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    transition: .3s;
+
+    font-weight: 600;
+
+}
+
+.hero-btn:hover{
+
+    background: #2563EB;
+
+    color: #fff;
+
+    transform: translateY(-3px);
+
+}
+
+@media(max-width:991px){
+
+    .services-hero{
+
+        min-height: 60vh;
+
+    }
+
+    .hero-content h1{
+
+        font-size: 48px;
+
+    }
+
+}
+
+@media(max-width:767px){
+
+    .services-hero{
+
+        min-height: 100vh;
+
+        text-align: center;
+
+    }
+
+    .hero-content{
+
+        max-width: 100%;
+
+    }
+
+    .hero-content h1{
+
+        font-size: 34px;
+
+    }
+
+    .hero-content p{
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+.hero-tag{
+
+    display:inline-block;
+
+    color:#3B82F6;
+
+    font-size:14px;
+
+    letter-spacing:5px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.section-tag{
+        display:inline-block;
+
+    color:#3B82F6;
+
+    letter-spacing:4px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+}
+
+.what-we-build{
+
+    background:#100C08;
+
+}
+
+.what-we-build .section-title{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.what-we-build .section-title h2{
+
+    color:#fff;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin:15px 0;
+
+}
+
+.what-we-build .section-title p{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+}
+
+.service-card{
+
+    background:#18130F;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:35px 30px;
+
+    height:100%;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+/* Accent Line */
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:#3B82F6;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s;
+
+}
+
+.service-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#3B82F6;
+
+    box-shadow:0 20px 50px rgba(59,130,246,.15);
+
+}
+
+.service-card .icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:16px;
+
+    background:rgba(59,130,246,.15);
+
+    color:#3B82F6;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+.service-card h4{
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.service-card p{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+}
+
+/* Gallery */
+/*=========================================
+GALLERY
+=========================================*/
+
+.gallery-section{
+
+    background:#100C08;
+
+    padding:100px 0;
+
+}
+
+/*=========================================
+HEADING
+=========================================*/
+
+.section-header{
+
+    max-width:750px;
+
+    margin:auto;
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-header h2{
+
+    color:#fff;
+
+    font-size:46px;
+
+    font-weight:700;
+
+    margin:18px 0;
+
+}
+
+.section-header p{
+
+    color:#d1d1d1;
+
+    line-height:1.9;
+
+}
+
+/*=========================================
+FILTER
+=========================================*/
+
+.gallery-filter{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:60px;
+
+}
+
+.filter-btn{
+
+    background:transparent;
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    padding:12px 28px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.filter-btn:hover{
+
+    background:#3B82F6;
+
+    border-color:#3B82F6;
+
+}
+
+.filter-btn.active{
+
+    background:#3B82F6;
+
+    border-color:#3B82F6;
+
+}
+
+/*=========================================
+GRID
+=========================================*/
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+/*=========================================
+CARD
+=========================================*/
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    cursor:pointer;
+
+    background:#18130F;
+
+    box-shadow:
+
+        0 15px 45px rgba(0,0,0,.35);
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    aspect-ratio:4/3;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+
+        transform .6s ease,
+
+        filter .6s ease;
+
+}
+
+/*=========================================
+OVERLAY
+=========================================*/
+
+.gallery-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:25px;
+
+    background:
+
+        linear-gradient(
+
+            to top,
+
+            rgba(0,0,0,.90),
+
+            rgba(0,0,0,.20),
+
+            transparent
+
+        );
+
+    opacity:0;
+
+    transition:.35s;
+
+    pointer-events:none;
+
+}
+
+.gallery-content{
+
+    font-family: "DM Serif Display", serif !important; 
+
+    transform:translateY(30px);
+
+    transition:.35s;
+
+}
+
+.gallery-content span{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:50px;
+
+    background:#3B82F6;
+
+    color:#fff;
+
+    font-size:12px;
+
+    margin-bottom:15px;
+
+}
+
+.gallery-content h4{
+
+    color:#fff;
+
+    margin-bottom:14px;
+
+    font-size:24px;
+
+}
+
+.view-project{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#fff;
+
+    font-size:15px;
+
+}
+
+.view-project i{
+
+    transition:.3s;
+
+}
+
+/*=========================================
+HOVER
+=========================================*/
+
+.gallery-item:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.45);
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.12);
+
+    filter:brightness(.70);
+
+}
+
+.gallery-item:hover .gallery-overlay{
+
+    opacity:1;
+
+}
+
+.gallery-item:hover .gallery-content{
+
+    
+    transform:translateY(0);
+
+}
+
+.gallery-item:hover .view-project i{
+
+    transform:translateX(6px);
+
+}
+
+/*=========================================
+LOAD MORE
+=========================================*/
+
+.load-more-container{
+
+    margin-top:60px;
+
+    text-align:center;
+
+}
+
+.load-more-btn{
+
+    background:#3B82F6;
+
+    color:#fff;
+
+    border:none;
+
+    padding:16px 42px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.load-more-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#2563EB;
+
+}
+
+/*=========================================
+EMPTY
+=========================================*/
+
+.empty-gallery{
+
+    text-align:center;
+
+    color:#bbb;
+
+    padding:80px 0;
+
+}
+
+.empty-gallery i{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+    color:#3B82F6;
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px){
+
+.gallery-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+@media(max-width:991px){
+
+.gallery-content h4{
+
+    color:#fff;
+
+    margin:0;
+
+    font-size:16px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.gallery-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.gallery-overlay{
+
+    opacity:1;
+
+}
+
+.gallery-content{
+
+    transform:none;
+
+}
+
+.gallery-content h4{
+
+       
+    font-size:14px;
+
+    margin:0;
+
+}
+
+.section-header h2{
+
+    font-size:34px;
+
+}
+
+.gallery-filter{
+
+    gap:10px;
+
+}
+
+.filter-btn{
+
+    padding:10px 18px;
+
+    font-size:14px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.gallery-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.gallery-content span{
+
+    font-size:10px;
+
+}
+
+.gallery-content h4{
+
+    font-size:16px;
+
+}
+
+.view-project{
+
+    font-size:13px;
+
+}
+
+}
+
+.gallery-item a{
+
+    display:block;
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.gclose,
+.gnext,
+.gprev{
+
+    width:52px !important;
+
+    height:52px !important;
+
+    border-radius:50%;
+
+    background:rgba(16,12,8,.85) !important;
+
+    transition:.3s;
+
+}
+
+.gclose:hover,
+.gnext:hover,
+.gprev:hover{
+
+    background:#3B82F6 !important;
+
+}
+
+
+/* GLightbox Overrides */
+.glightbox-container {
+  z-index: 9999 !important;
+}
+
+.gclose,
+.gnext,
+.gprev {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: rgba(16, 12, 8, 0.85) !important;
+  transition: background 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.gclose:hover,
+.gnext:hover,
+.gprev:hover {
+  background: #3B82F6 !important;
+}
+
+.gslide-image img {
+  border-radius: 4px;
+}
+
+.glightbox-clean .gdesc-inner{
+    text-align: center;
+}
+/* Force show navigation buttons on mobile */
+@media (max-width: 768px) {
+  .gnext,
+  .gprev {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 40px !important;
+    height: 40px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 99999 !important;
+  }
+
+  .gprev {
+    left: 5px !important;
+  }
+
+  .gnext {
+    right: 5px !important;
+  }
+
+  /* Make close button visible and accessible */
+  .gclose {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 40px !important;
+    height: 40px !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 99999 !important;
+  }
+
+  /* Adjust image to not overlap with buttons */
+  .gslide-image img {
+    max-height: 70vh !important;
+    object-fit: contain !important;
+  }
+
+  /* Ensure overlay doesn't block buttons */
+  .goverlay {
+    z-index: 1 !important;
+  }
+
+  .gslide {
+    z-index: 2 !important;
+  }
+
+  /* SVG icons inside buttons - make them visible */
+  .gnext svg,
+  .gprev svg,
+  .gclose svg {
+    width: 20px !important;
+    height: 20px !important;
+    fill: #fff !important;
+  }
+}
+
+/* Additional: Always ensure buttons are visible */
+.glightbox-mobile .gnext,
+.glightbox-mobile .gprev {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Aggressive mobile button fix */
+@media screen and (max-width: 768px) {
+  .glightbox-container .gslide-current .gnext,
+  .glightbox-container .gslide-current .gprev {
+    position: fixed !important;
+    display: flex !important;
+    top:50% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    z-index: 100000 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5) !important;
+  }
+
+  .glightbox-container .gslide-current .gprev {
+    left: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .glightbox-container .gslide-current .gnext {
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  /* Make sure SVG arrows are white and visible */
+  .gnext svg path,
+  .gprev svg path {
+    stroke: #ffffff !important;
+    stroke-width: 2 !important;
+  }
+}

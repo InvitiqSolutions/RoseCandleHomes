@@ -32,7 +32,8 @@
               "src/styles.css"
             ],
             "scripts": [
-               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+               "node_modules/glightbox/dist/js/glightbox.min.js"
             ]
           },
           "configurations": {
@@ -94,7 +95,8 @@
               "src/styles.css"
             ],
             "scripts": [
-               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+               "node_modules/glightbox/dist/js/glightbox.min.js"
             ]
           }
         }

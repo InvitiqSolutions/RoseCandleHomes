@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'glightbox/dist/css/glightbox.min.css';
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
 :root{
 
     --bg:#100C08;
@@ -18,5 +27,257 @@
     --transition:.35s ease;
 
     --shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.gallery-item a{
+
+    display:block;
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.gclose,
+.gnext,
+.gprev{
+
+    width:52px !important;
+
+    height:52px !important;
+
+    border-radius:50%;
+
+    background:rgba(16,12,8,.85) !important;
+
+    transition:.3s;
+
+}
+
+.gclose:hover,
+.gnext:hover,
+.gprev:hover{
+
+    background:#3B82F6 !important;
+
+}
+
+
+.gclose:hover,
+.gnext:hover,
+.gprev:hover{
+
+    background:#3B82F6 !important;
+
+}
+
+
+/* GLightbox Overrides */
+.glightbox-container {
+  z-index: 9999 !important;
+}
+
+.gclose,
+.gnext,
+.gprev {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: rgba(16, 12, 8, 0.85) !important;
+  transition: background 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.gclose:hover,
+.gnext:hover,
+.gprev:hover {
+  background: #3B82F6 !important;
+}
+
+.gslide-image img {
+  border-radius: 4px;
+}
+
+/* Force show navigation buttons on mobile */
+@media (max-width: 768px) {
+  .gnext,
+  .gprev {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 40px !important;
+    height: 40px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 99999 !important;
+  }
+
+  .gprev {
+    left: 5px !important;
+  }
+
+  .gnext {
+    right: 5px !important;
+  }
+
+  /* Make close button visible and accessible */
+  .gclose {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 40px !important;
+    height: 40px !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 99999 !important;
+  }
+
+  /* Adjust image to not overlap with buttons */
+  .gslide-image img {
+    max-height: 70vh !important;
+    object-fit: contain !important;
+  }
+
+  /* Ensure overlay doesn't block buttons */
+  .goverlay {
+    z-index: 1 !important;
+  }
+
+  .gslide {
+    z-index: 2 !important;
+  }
+
+  /* SVG icons inside buttons - make them visible */
+  .gnext svg,
+  .gprev svg,
+  .gclose svg {
+    width: 20px !important;
+    height: 20px !important;
+    fill: #fff !important;
+  }
+}
+
+/* Additional: Always ensure buttons are visible */
+.glightbox-mobile .gnext,
+.glightbox-mobile .gprev {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Aggressive mobile button fix */
+@media screen and (max-width: 768px) {
+  .glightbox-container .gslide-current .gnext,
+  .glightbox-container .gslide-current .gprev {
+    position: fixed !important;
+    display: flex !important;
+    top:50% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    z-index: 100000 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5) !important;
+  }
+
+  .glightbox-container .gslide-current .gprev {
+    left: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .glightbox-container .gslide-current .gnext {
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  /* Make sure SVG arrows are white and visible */
+  .gnext svg path,
+  .gprev svg path {
+    stroke: #ffffff !important;
+    stroke-width: 2 !important;
+  }
+}
+
+
+
+.section-divider {
+
+    position: relative;
+
+    width: 60%;
+
+    margin: 0 auto;
+
+    height: 0;
+
+    z-index: 5;
+
+}
+
+.section-divider::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 1px;
+
+    background: rgba(255,255,255,0.08);
+
+}
+
+.section-divider span {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #100C08;   /* Page background */
+
+    color: #3B82F6;
+
+    font-size: 14px;
+
+    border: 1px solid rgba(59,130,246,.25);
+
+}
+
+.glightbox-clean .gdesc-inner{
+    font-family: "DM Serif Display", serif !important; 
+
+    text-align: center;
+    font-size: 22px;
+}
+.glightbox-clean .gslide-title{
+    font-family: "DM Serif Display", serif !important; 
 
 }

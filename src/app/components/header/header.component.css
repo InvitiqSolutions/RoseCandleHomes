@@ -291,3 +291,13 @@
 
 }
 
+@media (max-width:991px){
+
+    .navbar-collapse{
+        margin-bottom: 5%;
+    }
+    .contact-btn{
+        display:none;
+    }
+}
+
