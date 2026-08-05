@@ -139,6 +139,8 @@ SERVICE HERO
 
     .services-hero{
 
+        margin-top: 15%;
+
         min-height: 100vh;
 
         text-align: center;
@@ -148,6 +150,11 @@ SERVICE HERO
     .hero-content{
 
         max-width: 100%;
+
+    }
+    .hero-content h1::after{
+
+        margin: 20px auto 0;
 
     }
 

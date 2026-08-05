@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../../../shared/service/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,31 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor() {}
+  constructor(private seo: SeoService) {}
+
+  ngOnInit(){
+    this.seo.updateSeo({
+
+      title:
+      'Luxury Home Builders in Chennai | Rose Candle Homes',
+
+      description:
+      'Rose Candle Homes is a trusted construction company in Chennai specializing in luxury villas, residential homes, commercial buildings, interior design, and renovation with premium craftsmanship.',
+
+      keywords:
+      'Construction Company Chennai, Luxury Home Builders Chennai, Villa Construction, Residential Construction, Commercial Construction, Interior Design Chennai, Home Renovation, Turnkey Projects',
+
+      image:
+      'https://rosecandlehomes.com/images/seo/home.jpg',
+
+      url:
+      'https://rosecandlehomes.com',
+
+      canonical:
+      'https://rosecandlehomes.com'
+
+  });
+  }
 
   statistics = [
   {

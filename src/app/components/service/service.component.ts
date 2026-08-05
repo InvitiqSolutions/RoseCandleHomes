@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import GLightbox from 'glightbox';
+import { SeoService } from '../../../shared/service/seo.service';
 
 export interface GalleryItem{
 
@@ -25,7 +26,8 @@ export interface GalleryItem{
 })
 export class ServiceComponent implements OnInit {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private seo: SeoService) {}
+  
   categories = [
     'All',
     'Residential',
@@ -83,6 +85,28 @@ export class ServiceComponent implements OnInit {
   }
 
 ngOnInit(): void {
+
+  this.seo.updateSeo({
+
+    title:
+    'Construction Services | Rose Candle Homes',
+
+    description:
+    'Explore our residential construction, luxury villa construction, commercial buildings, interior design, renovation, and turnkey construction services.',
+
+    keywords:
+    'Residential Construction Chennai, Commercial Construction Chennai, Interior Design Chennai, Home Renovation, Villa Builders Chennai, Turnkey Construction',
+
+    image:
+    'https://rosecandlehomes.com/images/seo/services.jpg',
+
+    url:
+    'https://rosecandlehomes.com/service',
+
+    canonical:
+    'https://rosecandlehomes.com/service'
+
+});
 
   this.http
     .get<GalleryItem[]>('gallery.json')

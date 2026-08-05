@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../../../shared/service/seo.service';
 
 @Component({
   selector: 'app-about',
@@ -9,7 +10,33 @@ import { RouterLink } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  constructor(
+      private seo: SeoService
+  ){}
 
+  ngOnInit(){
+    this.seo.updateSeo({
+
+    title:
+    'About Us | Rose Candle Homes',
+
+    description:
+    'Learn about Rose Candle Homes, our experienced team, core values, quality standards, and commitment to delivering exceptional residential and commercial construction projects.',
+
+    keywords:
+    'About Rose Candle Homes, Construction Company Chennai, Building Contractors, Residential Builders, Commercial Builders',
+
+    image:
+    'https://rosecandlehomes.com/images/seo/about.jpg',
+
+    url:
+    'https://rosecandlehomes.com/about',
+
+    canonical:
+    'https://rosecandlehomes.com/about'
+
+});
+  }
   statistics = [
   {
     value: '15+',

@@ -1350,6 +1350,9 @@ ABOUT CTA
 
 @media(max-width:767px){
 
+    .accordion-button{
+        font-size:18px;
+    }
     .cta-card{
 
         padding:40px 25px;
