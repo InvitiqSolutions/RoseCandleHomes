@@ -11,7 +11,6 @@ export class ContactComponent {
   constructor(
       private seo: SeoService
   ){}
-
   ngOnInit(){
     this.seo.updateSeo({
 
@@ -33,6 +32,6 @@ export class ContactComponent {
     canonical:
     'https://rosecandlehomes.com/contact'
 
-});
+    });
   }
 }

@@ -6,35 +6,29 @@ import { HttpClient } from '@angular/common/http';
 import GLightbox from 'glightbox';
 import { SeoService } from '../../../shared/service/seo.service';
 
-export interface GalleryItem{
+export interface GalleryItem {
+  image: string;
 
-    image:string;
+  category: string;
 
-    category:string;
+  title: string;
 
-    title:string;
-
-    location?:string;
-
+  location?: string;
 }
 
 @Component({
   selector: 'app-service',
-  imports: [FormsModule,CommonModule,RouterModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './service.component.html',
-  styleUrl: './service.component.css'
+  styleUrl: './service.component.css',
 })
 export class ServiceComponent implements OnInit {
+  constructor(
+    private http: HttpClient,
+    private seo: SeoService,
+  ) { }
 
-  constructor(private http: HttpClient,private seo: SeoService) {}
-  
-  categories = [
-    'All',
-    'Residential',
-    'Commercial',
-    'Interior',
-    'Renovation'
-  ];
+  categories = ['All', 'Residential', 'Commercial', 'Interior', 'Renovation'];
 
   selectedCategory = 'All';
 
@@ -79,97 +73,76 @@ export class ServiceComponent implements OnInit {
         draggable: true,
         openEffect: 'zoom',
         closeEffect: 'fade',
-        slideEffect: 'slide'
+        slideEffect: 'slide',
       });
     }, 50);
   }
 
-ngOnInit(): void {
+  ngOnInit(): void {
+    this.seo.updateSeo({
+      title: 'Construction Services | Rose Candle Homes',
 
-  this.seo.updateSeo({
+      description:
+        'Explore our residential construction, luxury villa construction, commercial buildings, interior design, renovation, and turnkey construction services.',
 
-    title:
-    'Construction Services | Rose Candle Homes',
+      keywords:
+        'Residential Construction Chennai, Commercial Construction Chennai, Interior Design Chennai, Home Renovation, Villa Builders Chennai, Turnkey Construction',
 
-    description:
-    'Explore our residential construction, luxury villa construction, commercial buildings, interior design, renovation, and turnkey construction services.',
+      image: 'https://rosecandlehomes.com/images/seo/services.jpg',
 
-    keywords:
-    'Residential Construction Chennai, Commercial Construction Chennai, Interior Design Chennai, Home Renovation, Villa Builders Chennai, Turnkey Construction',
+      url: 'https://rosecandlehomes.com/service',
 
-    image:
-    'https://rosecandlehomes.com/images/seo/services.jpg',
+      canonical: 'https://rosecandlehomes.com/service',
+    });
 
-    url:
-    'https://rosecandlehomes.com/service',
-
-    canonical:
-    'https://rosecandlehomes.com/service'
-
-});
-
-  this.http
-    .get<GalleryItem[]>('gallery.json')
-    .subscribe({
-
+    this.http.get<GalleryItem[]>('gallery.json').subscribe({
       next: (data) => {
-
         this.projects = data;
 
-        this.categories = [
-          'All',
-          ...new Set(data.map(x => x.category))
-        ];
+        this.categories = ['All', ...new Set(data.map((x) => x.category))];
 
         this.filterGallery('All');
 
         setTimeout(() => {
-            this.initializeLightbox();
+          this.initializeLightbox();
         });
-
       },
 
       error: (err) => {
-
         console.error('Failed to load gallery.json', err);
-
-      }
-
+      },
     });
-
-}
+  }
 
   filterGallery(category: string): void {
-
     this.selectedCategory = category;
 
     if (category === 'All') {
       this.filteredProjects = [...this.projects];
     } else {
       this.filteredProjects = this.projects.filter(
-        x => x.category === category
+        (x) => x.category === category,
       );
     }
 
     this.visibleProjects = this.filteredProjects.slice(0, this.pageSize);
 
-  // Set flag to re-initialize lightbox after view updates
+    // Set flag to re-initialize lightbox after view updates
     this.needsLightboxInit = true;
   }
 
   loadMore(): void {
-
     const current = this.visibleProjects.length;
 
     this.visibleProjects = this.filteredProjects.slice(
       0,
-      current + this.pageSize
+      current + this.pageSize,
     );
 
-     setTimeout(() => this.lightbox?.reload());
+    setTimeout(() => this.lightbox?.reload());
 
     setTimeout(() => {
-        this.initializeLightbox();
+      this.initializeLightbox();
     });
   }
 }
