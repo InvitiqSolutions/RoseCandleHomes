@@ -185,54 +185,9 @@
     "title": "Interior 33"
   },
   {
-    "image": "images/gallery/Interior/Interior_32.jpg",
-    "category": "Interior",
-    "title": "Interior 32"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_31.jpg",
-    "category": "Interior",
-    "title": "Interior 31"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_30.png",
-    "category": "Interior",
-    "title": "Interior 30"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_29.jpg",
-    "category": "Interior",
-    "title": "Interior 29"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_28.png",
-    "category": "Interior",
-    "title": "Interior 28"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_27.png",
-    "category": "Interior",
-    "title": "Interior 27"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_26.png",
-    "category": "Interior",
-    "title": "Interior 26"
-  },
-  {
     "image": "images/gallery/Interior/Interior_25.jpg",
     "category": "Interior",
     "title": "Interior 25"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_24.jpg",
-    "category": "Interior",
-    "title": "Interior 24"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_23.png",
-    "category": "Interior",
-    "title": "Interior 23"
   },
   {
     "image": "images/gallery/Interior/Interior_22.png",
@@ -295,31 +250,6 @@
     "title": "Interior 11"
   },
   {
-    "image": "images/gallery/Interior/Interior_10.jpg",
-    "category": "Interior",
-    "title": "Interior 10"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_9.jpg",
-    "category": "Interior",
-    "title": "Interior 9"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_8.png",
-    "category": "Interior",
-    "title": "Interior 8"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_7.png",
-    "category": "Interior",
-    "title": "Interior 7"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_6.jpg",
-    "category": "Interior",
-    "title": "Interior 6"
-  },
-  {
     "image": "images/gallery/Interior/Interior_5.jpg",
     "category": "Interior",
     "title": "Interior 5"
@@ -338,11 +268,6 @@
     "image": "images/gallery/Interior/Interior_2.jpg",
     "category": "Interior",
     "title": "Interior 2"
-  },
-  {
-    "image": "images/gallery/Interior/Interior_1.jpg",
-    "category": "Interior",
-    "title": "Interior 1"
   },
   {
     "image": "images/gallery/Residential/Residential_25.jpg",
@@ -375,21 +300,6 @@
     "title": "Residential 20"
   },
   {
-    "image": "images/gallery/Residential/Residential_19.jpg",
-    "category": "Residential",
-    "title": "Residential 19"
-  },
-  {
-    "image": "images/gallery/Residential/Residential_18.jpg",
-    "category": "Residential",
-    "title": "Residential 18"
-  },
-  {
-    "image": "images/gallery/Residential/Residential_17 (1).jpg",
-    "category": "Residential",
-    "title": "Residential 17 (1)"
-  },
-  {
     "image": "images/gallery/Residential/Residential_17.jpg",
     "category": "Residential",
     "title": "Residential 17"
@@ -410,11 +320,6 @@
     "title": "Residential 14"
   },
   {
-    "image": "images/gallery/Residential/Residential_11.jpg",
-    "category": "Residential",
-    "title": "Residential 11"
-  },
-  {
     "image": "images/gallery/Residential/Residential_10.jpg",
     "category": "Residential",
     "title": "Residential 10"
@@ -430,11 +335,6 @@
     "title": "Residential 8"
   },
   {
-    "image": "images/gallery/Residential/Residential_7.jpg",
-    "category": "Residential",
-    "title": "Residential 7"
-  },
-  {
     "image": "images/gallery/Residential/Residential_6.jpg",
     "category": "Residential",
     "title": "Residential 6"
@@ -443,25 +343,5 @@
     "image": "images/gallery/Residential/Residential_5.png",
     "category": "Residential",
     "title": "Residential 5"
-  },
-  {
-    "image": "images/gallery/Residential/Residential_4.jpg",
-    "category": "Residential",
-    "title": "Residential 4"
-  },
-  {
-    "image": "images/gallery/Residential/Residential_3.png",
-    "category": "Residential",
-    "title": "Residential 3"
-  },
-  {
-    "image": "images/gallery/Residential/Residential_2.png",
-    "category": "Residential",
-    "title": "Residential 2"
-  },
-  {
-    "image": "images/gallery/Residential/Residential_1.png",
-    "category": "Residential",
-    "title": "Residential 1"
   }
 ]
