@@ -973,6 +973,10 @@ RESPONSIVE
 /* MOBILE */
 
 @media (max-width: 600px) {
+
+  .interior-video-player {
+    aspect-ratio: 8 / 10;
+  }
   .interior-video-section {
     padding: 70px 0;
   }
