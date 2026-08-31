@@ -28,8 +28,14 @@ export class HomeComponent {
 
       canonical: 'https://rosecandlehomes.com',
     });
+
+    this.displayTestimonials = [
+        ...this.testimonials,
+        ...this.testimonials
+    ];
   }
 
+  displayTestimonials: any[] = [];
   statistics = [
     {
       value: '15+',
@@ -114,4 +120,6 @@ export class HomeComponent {
       this.currentIndex--;
     }
   }
+
+  
 }

@@ -254,60 +254,90 @@
 </div>
 <!-- Testimonials -->
 <section class="testimonial-section">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle"> TESTIMONIALS </span>
 
-            <h2 class="section-title">What Our Clients Say</h2>
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                TESTIMONIALS
+            </span>
+
+            <h2 class="section-title">
+                What Our Clients Say
+            </h2>
 
             <p class="section-description">
                 We believe every successful project begins with trust and ends with
                 customer satisfaction.
             </p>
+
         </div>
 
-        <div class="testimonial-wrapper">
-            <div class="testimonial-track" [style.transform]="
-          'translateX(-' + currentIndex * translatePercentage + '%)'
-        ">
-                <div class="testimonial-card" *ngFor="let testimonial of testimonials">
-                    <div class="quote">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
 
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
+<div class="testimonial-wrapper">
 
-                    <p class="review">"{{ testimonial.review }}"</p>
+    <div class="testimonial-track">
 
-                    <div class="divider"></div>
+        <div
+            class="testimonial-card"
+            *ngFor="let testimonial of displayTestimonials">
 
-                    <h5>
-                        {{ testimonial.name }}
-                    </h5>
-
-                    <span>
-                        {{ testimonial.designation }}
-                    </span>
-                </div>
+            <div class="quote">
+                <i class="fas fa-quote-left"></i>
             </div>
+
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+
+            <p class="review">
+                "{{ testimonial.review }}"
+            </p>
+
+            <div class="divider"></div>
+
+            <h5>
+                {{ testimonial.name }}
+            </h5>
+
+            <span>
+                {{ testimonial.designation }}
+            </span>
+
         </div>
+
+    </div>
+
+</div>
+
 
         <div class="testimonial-navigation">
-            <button class="nav-btn" (click)="previous()">
+
+            <button
+                class="nav-btn"
+                (click)="previous()">
+
                 <i class="fas fa-arrow-left"></i>
+
             </button>
 
-            <button class="nav-btn" (click)="next()">
+            <button
+                class="nav-btn"
+                (click)="next()">
+
                 <i class="fas fa-arrow-right"></i>
+
             </button>
+
         </div>
+
     </div>
+
 </section>
 
 <div class="section-divider">

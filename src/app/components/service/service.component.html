@@ -136,6 +136,121 @@
 <div class="section-divider">
     <span>◆</span>
 </div>
+
+<section class="interior-video-section">
+
+    <div class="container">
+
+        <div class="interior-video-wrapper">
+
+            <!-- Video -->
+            <div class="interior-video">
+
+                <video
+                    #interiorVideo
+                    class="interior-video-player"
+                    poster="/images/project5.jpg"
+                    controls
+                    playsinline
+                    preload="metadata">
+
+                    <source
+                        src="/images/videos/RoseCandleHomes_InteriorVideo.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+                <!-- Play Overlay -->
+
+                <button
+                    class="video-play-btn"
+                    *ngIf="!isVideoPlaying"
+                    (click)="playVideo(interiorVideo)"
+                    aria-label="Play interior work video">
+
+                    <i class="fas fa-play"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Content -->
+
+            <div class="interior-video-content">
+
+                <span class="section-tag">
+                    INTERIOR WORKS
+                </span>
+
+                <h2>
+                    Designed to Feel
+                    <span>Beautiful.</span>
+                </h2>
+
+                <p>
+                    Step inside some of our interior projects and discover
+                    how thoughtful design, premium materials, and detailed
+                    craftsmanship come together to create exceptional spaces.
+                </p>
+
+                <div class="video-highlights">
+
+                    <div class="video-highlight">
+
+                        <i class="fas fa-gem"></i>
+
+                        <div>
+                            <h5>Premium Finishes</h5>
+                            <p>Carefully selected materials and finishes.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="video-highlight">
+
+                        <i class="fas fa-compass-drafting"></i>
+
+                        <div>
+                            <h5>Thoughtful Design</h5>
+                            <p>Spaces designed around your lifestyle.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="video-highlight">
+
+                        <i class="fas fa-hammer"></i>
+
+                        <div>
+                            <h5>Expert Craftsmanship</h5>
+                            <p>Precision in every detail.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a
+                    routerLink="/contact"
+                    class="video-btn">
+
+                    Discuss Your Project
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <!-- Gallery -->
 <!-- =========================================
      GALLERY SECTION
@@ -167,9 +282,11 @@
         <!-- GALLERY -->
 
         <div class="gallery-grid">
-            <div class="gallery-item" *ngFor="let item of visibleProjects">
+            <div class="gallery-item" *ngFor="let item of visibleProjects; trackBy: trackByImage"
+                [class.gallery-new]="newItems.has(item.image)">
                 <a class="gallery-lightbox" [href]="item.image" data-gallery="projects" [attr.data-title]="item.title">
-                    <img [src]="item.image" [alt]="item.title" loading="lazy"/>
+                    <img [src]="item.image" [alt]="item.title" loading="lazy" decoding="async"
+                        (load)="imageLoaded($event)" />
 
                     <div class="gallery-overlay">
                         <div class="gallery-content">
@@ -184,7 +301,7 @@
 
         <!-- EMPTY -->
 
-        <div class="empty-gallery" *ngIf="filteredProjects.length == 0">
+        <div class="empty-gallery" *ngIf="filteredProjects.length === 0">
             <i class="fas fa-image"></i>
 
             <h4>No Projects Found</h4>

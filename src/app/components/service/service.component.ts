@@ -26,7 +26,7 @@ export class ServiceComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private seo: SeoService,
-  ) { }
+  ) {}
 
   categories = ['All', 'Residential', 'Commercial', 'Interior', 'Renovation'];
 
@@ -131,18 +131,53 @@ export class ServiceComponent implements OnInit {
     this.needsLightboxInit = true;
   }
 
+  previousImageCount = 0;
+  newItems = new Set<string>();
+  trackByImage(index: number, item: GalleryItem): string {
+    return item.image;
+  }
   loadMore(): void {
     const current = this.visibleProjects.length;
 
-    this.visibleProjects = this.filteredProjects.slice(
-      0,
+    const newProjects = this.filteredProjects.slice(
+      current,
       current + this.pageSize,
     );
 
-    setTimeout(() => this.lightbox?.reload());
+    // Mark only the newly added projects
+    newProjects.forEach((item) => {
+      this.newItems.add(item.image);
+    });
+
+    this.visibleProjects = [...this.visibleProjects, ...newProjects];
 
     setTimeout(() => {
       this.initializeLightbox();
     });
+
+    // Remove animation class after animation finishes
+    setTimeout(() => {
+      newProjects.forEach((item) => {
+        this.newItems.delete(item.image);
+      });
+    }, 1000);
   }
+  imageLoaded(event: Event): void {
+    const image = event.target as HTMLImageElement;
+
+    image.classList.add('loaded');
+  }
+
+  isVideoPlaying = false;
+
+  playVideo(video: HTMLVideoElement): void {
+    video.play();
+
+    this.isVideoPlaying = true;
+  }
+  videoEnded(): void {
+
+    this.isVideoPlaying = false;
+
+}
 }
