@@ -288,11 +288,7 @@
             </div>
 
             <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i *ngFor="let n of [].constructor(testimonial.ratings)" class="fas fa-star"></i>
             </div>
 
             <p class="review">
@@ -301,13 +297,23 @@
 
             <div class="divider"></div>
 
-            <h5>
-                {{ testimonial.name }}
-            </h5>
+            <div class="d-flex align-items-center justify-content-between">
+                <div>
+                    <h5>
+                        {{ testimonial.name }}
+                    </h5>
+        
+                    <span>
+                        {{ testimonial.designation }}
+                    </span>
+    
+                </div>
+    
+                <a href="{{ testimonial.link }}" target="_blank" class="testimonial-link">
+                    <i class="fas fa-link" style="font-size: 30px;"></i>
+                </a>
 
-            <span>
-                {{ testimonial.designation }}
-            </span>
+            </div>
 
         </div>
 

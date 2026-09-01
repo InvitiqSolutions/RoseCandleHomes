@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../../shared/service/seo.service';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -62,37 +63,63 @@ export class HomeComponent {
 
   testimonials = [
     {
-      name: 'Rahul Sharma',
-      designation: 'Luxury Villa Owner',
-      review:
-        'BuildCraft transformed our dream home into reality. The quality and attention to detail exceeded our expectations.',
-    },
-    {
-      name: 'Priya Nair',
+      name: 'Akhil Menon',
       designation: 'Home Owner',
+      ratings: 5,
       review:
-        'Professional team, timely delivery and outstanding craftsmanship.',
+        'Mr Shejimon, Mr Rafeeq and the team did a immaculate and a very beautiful job in our balcony in the committed time, with utmost quality and within the budget we were looking for.',
+      link:'https://share.google/zGQUMiavxcy8EjwCi'
     },
     {
-      name: 'Arun Kumar',
-      designation: 'Commercial Client',
-      review: 'Excellent project management from planning to completion.',
+      name: 'venkat c',
+      designation: 'Home Owner',
+      ratings: 5,
+      review:
+        'I absolutely loved the work. I would definitely recommend RoseCandle Homes to anyone. They are very professional and made the entire experience amazing.',
+      link: 'https://share.google/E8Pdty0eqfyModoTv'
     },
     {
-      name: 'Vignesh',
-      designation: 'Villa Owner',
-      review: 'The team delivered a premium finish with exceptional support.',
+      name: 'Parag Turkar',
+      designation: 'Home Owner',
+      ratings: 5,
+      review: 'The team did an excellent job, they carefully understood all our requirements, executed the work with great precision, and completed the entire installation within just two days. The quality of workmanship and professionalism was truly impressive. Highly recommended!',
+      link: 'https://share.google/7iSvV7RpHTFFa2xR3'
     },
     {
-      name: 'Karthik',
-      designation: 'Apartment Owner',
-      review: 'Modern designs and excellent customer support.',
+      name: 'Hemant Yadav',
+      designation: 'Home Owner',
+      ratings: 5,
+      review: 'I wholeheartedly recommend Rosecandle Homes Ventures Pvt. Ltd. to anyone in need of top-tier design services, especially when time is of the essence. We are grateful for their efforts in making our house feel like a dream home. Thank you for a job well done!',
+      link: 'https://share.google/n7kkoAgP6MwI7nHng'
     },
     {
-      name: 'Suresh',
-      designation: 'Business Owner',
-      review: 'One of the best construction companies we have worked with.',
+      name: 'Viknesh Sankaran',
+      designation: 'Home Owner',
+      ratings: 5,
+      review: 'Absolutely thrilled with the amazing work done by Rose candle homes!! They transformed our space beautifully, paying attention to every detail. Highly professional, creative, and easy to work with. Highly recommended!',
+      link: 'https://share.google/TKVHBKQe7Gw4pYjUl'
     },
+    {
+      name: 'Saket Verma',
+      designation: 'Home Owner',
+      ratings: 5,
+      review: 'Marvellous, totally professional and great work. Shejimon sir and team has done a fantastic work for my parking and porch. More over they listen to their customers plus help with innovative ideas and suggestions. End of the day I am a damn happy customer. Sheiji sir and his team deserves a 5 star.',
+      link: 'https://share.google/84hhpH3liExlt4QPe'
+    },
+    {
+      name: 'Hareesh N K',
+      designation: 'Home Owner',
+      ratings: 5,
+      review: 'They are very much professional in their work. They completed the work on committed time and did a good work. I will strongly recommend them for any house hold related work.',
+      link: 'https://share.google/PvWtHDJHSAxKFU9LC'
+    },
+    {
+      name: 'P Ravindran',
+      designation: 'Home Owner',
+      ratings: 5,
+      review: 'These people have done an incredible work.From planning to execution,in a very professional manner and very responsive to all my queries in between.Quality of work is very good and a good value for my hard earned money.',
+      link: 'https://share.google/SBC3lLtCcYetd4mhS'
+    }
   ];
 
   currentIndex = 0;

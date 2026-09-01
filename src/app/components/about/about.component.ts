@@ -36,10 +36,10 @@ export class AboutComponent {
       description: 'Delivering quality construction with excellence.',
     },
     {
-      value: '250+',
-      title: 'Projects Completed',
+      value: '900+',
+      title: 'Happy Clients',
       description:
-        'Successfully completed residential and commercial projects.',
+        'Building lasting relationships through quality work and customer satisfaction.',
     },
     {
       value: '50+',

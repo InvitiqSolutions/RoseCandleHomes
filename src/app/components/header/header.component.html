@@ -8,13 +8,15 @@
       </a>
 
       <!-- Mobile Toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" #navbarToggler>
-        <i class="fas fa-bars"></i>
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()" [attr.aria-expanded]="isNavbarOpen"
+        aria-controls="navbar" aria-label="Toggle navigation">
+        <i class="fas" [class.fa-bars]="!isNavbarOpen" [class.fa-xmark]="isNavbarOpen">
+        </i>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbar" #navbarCollapse>
+      <div class="navbar-collapse" id="navbar" [class.show]="isNavbarOpen">
         <!-- Center Navigation -->
+
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
             <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"

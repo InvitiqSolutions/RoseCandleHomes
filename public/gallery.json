@@ -1,5 +1,65 @@
 [
   {
+    "image": "images/gallery/Apartments/Apartment_4.png",
+    "category": "Apartments",
+    "title": "Apartment 4"
+  },
+  {
+    "image": "images/gallery/Apartments/Apartment_3.jpg",
+    "category": "Apartments",
+    "title": "Apartment 3"
+  },
+  {
+    "image": "images/gallery/Apartments/Apartment_2.jpg",
+    "category": "Apartments",
+    "title": "Apartment 2"
+  },
+  {
+    "image": "images/gallery/Apartments/Apartment_1.jpg",
+    "category": "Apartments",
+    "title": "Apartment 1"
+  },
+  {
+    "image": "images/gallery/Commercial/pool-cottage.jpg",
+    "category": "Commercial",
+    "title": "Pool Cottage"
+  },
+  {
+    "image": "images/gallery/Commercial/banquette hall.jpg",
+    "category": "Commercial",
+    "title": "Banquette Hall"
+  },
+  {
+    "image": "images/gallery/Interior/Interior_74.jpeg",
+    "category": "Interior",
+    "title": "Interior 74"
+  },
+  {
+    "image": "images/gallery/Interior/Interior_73.jpeg",
+    "category": "Interior",
+    "title": "Interior 73"
+  },
+  {
+    "image": "images/gallery/Interior/Interior_75.jpeg",
+    "category": "Interior",
+    "title": "Interior 75"
+  },
+  {
+    "image": "images/gallery/Interior/Interior_71.jpeg",
+    "category": "Interior",
+    "title": "Interior 71"
+  },
+  {
+    "image": "images/gallery/Interior/Interior_70.jpeg",
+    "category": "Interior",
+    "title": "Interior 70"
+  },
+  {
+    "image": "images/gallery/Interior/Interior_72.jpeg",
+    "category": "Interior",
+    "title": "Interior 72"
+  },
+  {
     "image": "images/gallery/Interior/Interior_69.jpeg",
     "category": "Interior",
     "title": "Interior 69"
