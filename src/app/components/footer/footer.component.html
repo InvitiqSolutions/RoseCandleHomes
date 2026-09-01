@@ -4,7 +4,7 @@
             <!-- Company -->
 
             <div class="col-lg-4 col-md-6 text-center text-md-start">
-                <h3 class="footer-logo">Rose Candle Homes</h3>
+                <h3 class="footer-logo">RoseCandle Homes</h3>
 
                 <p class="footer-about">
                     We specialize in luxury homes, commercial buildings, renovations, and
@@ -55,15 +55,8 @@
                 <h5>Our Services</h5>
 
                 <ul>
-                    <li><a href="#">Residential Construction</a></li>
+                    <li *ngFor="let category of categories"><a href="/service#gallery">{{ category }}</a></li>
 
-                    <li><a href="#">Commercial Construction</a></li>
-
-                    <li><a href="#">Interior Design</a></li>
-
-                    <li><a href="#">Renovation</a></li>
-
-                    <li><a href="#">Architecture Planning</a></li>
                 </ul>
             </div>
 
@@ -104,7 +97,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="footer-bottom-content">
-                <p>© 2026 Rose Candle Homes. All Rights Reserved.</p>
+                <p>© 2026 RoseCandle Homes. All Rights Reserved.</p>
 
                 <button type="button" class="btn back-top" (click)="scrollToTop()" aria-label="Back to top">
                     <i class="fas fa-arrow-up"></i>

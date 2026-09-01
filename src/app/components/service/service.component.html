@@ -323,5 +323,16 @@
                 Load More Projects
             </button>
         </div>
+
+        <div class="load-more-container" *ngIf="visibleProjects.length == filteredProjects.length">
+            <a href="https://www.instagram.com/rosecandlehomes_2018?igsi=MWZ3bHlvY2g4MWJzZA==" target="_blank" rel="noopener noreferrer">
+                 
+            <button class="load-more-btn" (click)="loadMore()">
+                   <i class="fab fa-instagram"></i>
+                   
+                   Visit Our Instagram Page for More Projects
+            </button>
+            </a>
+        </div>
     </div>
 </section>
