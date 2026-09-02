@@ -45,43 +45,50 @@ export class ContactComponent {
       phone: '',
       query: ''
     };
-  submitContact() {
-
-    const formData = new URLSearchParams();
-
-    formData.set('form-name', 'enquiry');
-    formData.set('name', this.contact.name);
-    formData.set('email', this.contact.email);
-    formData.set('phone', this.contact.phone);
-    formData.set('query', this.contact.query);
-
-    fetch('/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: formData.toString()
-    })
-    .then(() => {
-
-      alert('Thank you! Your enquiry has been sent successfully.');
-
-      this.contact = {
-        name: '',
-        phone: '',
-        email: '',
-        query: ''
-      };
-
-    })
-    .catch(error => {
-
-      console.error(error);
-
-      alert('Unable to send your enquiry. Please try again.');
-
-    });
-  
+submitContact(): void {
+  if(!this.contact.name || !this.contact.email || !this.contact.phone || !this.contact.query) {
+    alert('Please fill in all required fields.');
+    return;
   }
+  const formData = new URLSearchParams();
+
+  formData.set('form-name', 'enquiry');
+  formData.set('name', this.contact.name);
+  formData.set('email', this.contact.email);
+  formData.set('phone', this.contact.phone);
+  formData.set('query', this.contact.query);
+
+  fetch('/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: formData.toString()
+  })
+  .then(response => {
+
+    if (!response.ok) {
+      throw new Error('Form submission failed');
+    }
+
+    alert('Thank you! Your enquiry has been sent successfully.');
+
+    this.contact = {
+      name: '',
+      phone: '',
+      email: '',
+      query: ''
+    };
+
+  })
+  .catch(error => {
+
+    console.error(error);
+
+    alert('Unable to send your enquiry. Please try again.');
+
+  });
+
+}
 
 }
