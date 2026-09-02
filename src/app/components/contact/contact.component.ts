@@ -45,7 +45,9 @@ export class ContactComponent {
       phone: '',
       query: ''
     };
-submitContact(): void {
+
+
+  submitContact(): void {
   if(!this.contact.name || !this.contact.email || !this.contact.phone || !this.contact.query) {
     alert('Please fill in all required fields.');
     return;
@@ -66,7 +68,7 @@ submitContact(): void {
     body: formData.toString()
   })
   .then(response => {
-
+    debugger
     if (!response.ok) {
       throw new Error('Form submission failed');
     }
