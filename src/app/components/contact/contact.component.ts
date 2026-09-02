@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { SeoService } from '../../../shared/service/seo.service';
 
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [FormsModule,CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -34,4 +37,51 @@ export class ContactComponent {
 
     });
   }
+
+
+    contact = {
+      name: '',
+      email: '',
+      phone: '',
+      query: ''
+    };
+  submitContact() {
+
+    const formData = new URLSearchParams();
+
+    formData.set('form-name', 'enquiry');
+    formData.set('name', this.contact.name);
+    formData.set('email', this.contact.email);
+    formData.set('phone', this.contact.phone);
+    formData.set('query', this.contact.query);
+
+    fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formData.toString()
+    })
+    .then(() => {
+
+      alert('Thank you! Your enquiry has been sent successfully.');
+
+      this.contact = {
+        name: '',
+        phone: '',
+        email: '',
+        query: ''
+      };
+
+    })
+    .catch(error => {
+
+      console.error(error);
+
+      alert('Unable to send your enquiry. Please try again.');
+
+    });
+  
+  }
+
 }
