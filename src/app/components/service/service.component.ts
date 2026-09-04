@@ -86,13 +86,13 @@ export class ServiceComponent implements OnInit {
         'Explore our residential construction, luxury villa construction, commercial buildings, interior design, renovation, and turnkey construction services.',
 
       keywords:
-        'Residential Construction Chennai, Commercial Construction Chennai, Interior Design Chennai, Home Renovation, Villa Builders Chennai, Turnkey Construction',
+        'Residential Construction Bangalore, Commercial Construction Bangalore, Interior Design Bangalore, Home Renovation, Villa Builders Bangalore, Turnkey Construction',
 
-      image: 'https://rosecandlehomes.com/images/seo/services.jpg',
+      image: 'https://www.rosecandlehomes.com/images/seo/services.jpg',
 
-      url: 'https://rosecandlehomes.com/service',
+      url: 'https://www.rosecandlehomes.com/service',
 
-      canonical: 'https://rosecandlehomes.com/service',
+      canonical: 'https://www.rosecandlehomes.com/service',
     });
 
     this.http.get<GalleryItem[]>('gallery.json').subscribe({

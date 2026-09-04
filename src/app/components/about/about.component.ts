@@ -20,13 +20,13 @@ export class AboutComponent {
         'Learn about Rose Candle Homes, our experienced team, core values, quality standards, and commitment to delivering exceptional residential and commercial construction projects.',
 
       keywords:
-        'About Rose Candle Homes, Construction Company Chennai, Building Contractors, Residential Builders, Commercial Builders',
+        'About Rose Candle Homes, Construction Company Bangalore, Building Contractors, Residential Builders, Commercial Builders',
 
-      image: 'https://rosecandlehomes.com/images/seo/about.jpg',
+      image: 'https://www.rosecandlehomes.com/images/seo/about.jpg',
 
-      url: 'https://rosecandlehomes.com/about',
+      url: 'https://www.rosecandlehomes.com/about',
 
-      canonical: 'https://rosecandlehomes.com/about',
+      canonical: 'https://www.rosecandlehomes.com/about',
     });
   }
   statistics = [

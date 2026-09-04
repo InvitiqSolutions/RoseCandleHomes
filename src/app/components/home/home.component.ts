@@ -15,19 +15,19 @@ export class HomeComponent {
 
   ngOnInit() {
     this.seo.updateSeo({
-      title: 'Luxury Home Builders in Chennai | Rose Candle Homes',
+      title: 'Luxury Home Builders in Bangalore | Rose Candle Homes',
 
       description:
-        'Rose Candle Homes is a trusted construction company in Chennai specializing in luxury villas, residential homes, commercial buildings, interior design, and renovation with premium craftsmanship.',
+        'Rose Candle Homes is a trusted construction company in Bangalore specializing in luxury villas, residential homes, commercial buildings, interior design, and renovation with premium craftsmanship.',
 
       keywords:
-        'Construction Company Chennai, Luxury Home Builders Chennai, Villa Construction, Residential Construction, Commercial Construction, Interior Design Chennai, Home Renovation, Turnkey Projects',
+        'Construction Company Bangalore, Luxury Home Builders Bangalore, Villa Construction, Residential Construction, Commercial Construction, Interior Design Bangalore, Home Renovation, Turnkey Projects',
 
-      image: 'https://rosecandlehomes.com/images/seo/home.jpg',
+      image: 'https://www.rosecandlehomes.com/images/seo/home.jpg',
 
-      url: 'https://rosecandlehomes.com',
+      url: 'https://www.rosecandlehomes.com',
 
-      canonical: 'https://rosecandlehomes.com',
+      canonical: 'https://www.rosecandlehomes.com',
     });
 
     this.displayTestimonials = [

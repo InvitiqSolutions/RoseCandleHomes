@@ -21,19 +21,19 @@ export class ContactComponent {
     'Contact Rose Candle Homes',
 
     description:
-    'Contact Rose Candle Homes for luxury home construction, commercial building projects, interior design, and renovation services in Chennai.',
+    'Contact Rose Candle Homes for luxury home construction, commercial building projects, interior design, and renovation services in Bangalore.',
 
     keywords:
-    'Contact Construction Company Chennai, Building Contractors Chennai, Luxury Home Builders Contact',
+    'Contact Construction Company Bangalore, Building Contractors Bangalore, Luxury Home Builders Contact',
 
     image:
-    'https://rosecandlehomes.com/images/seo/contact.jpg',
+    'https://www.rosecandlehomes.com/images/seo/contact.jpg',
 
     url:
-    'https://rosecandlehomes.com/contact',
+    'https://www.rosecandlehomes.com/contact',
 
     canonical:
-    'https://rosecandlehomes.com/contact'
+    'https://www.rosecandlehomes.com/contact'
 
     });
   }
